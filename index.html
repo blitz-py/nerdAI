@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NerdAI - Open Source</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        #websiteImage {
+            display: block;
+            margin: 0 auto;
+            width: 150px; /* Adjust the width as needed */
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #666;
+        }
+
+        select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #generatedContent {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+        }
+
+        #footer {
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #footer a {
+            text-decoration: none;
+        }
+
+        #githubButton {
+            background-color: #333;
+        }
+
+        #bmacButton {
+            background-color: #FFDD00;
+            color: #000;
+        }
+
+        #bmacButton img {
+            height: 20px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <img id="websiteImage" src="img/tbsp.png" alt="NerdAI Logo">
+
+    <h1>NerdAI - Content Generator</h1>
+
+    <label for="subject">Select a Subject:</label>
+    <select id="subject">
+        <option value="math">Math</option>
+        <option value="science">Science</option>
+        <option value="coding">Coding</option>
+        <option value="english">English</option>
+        <option value="music">Music</option>
+        <!-- Add more subjects as needed -->
+    </select>
+
+    <label for="description">Describe what you want:</label>
+    <textarea id="description" placeholder="Provide details about what you're looking for"></textarea>
+
+    <button onclick="generateContent()">Generate Content</button>
+    <button onclick="randomize()">Randomize</button>
+
+    <div id="generatedContent"></div>
+
+<div id="footer">
+        <a href="https://github.com/blitz-py" target="_blank" id="githubButton" title="Visit GitHub">
+            <img src="img/octocat.png" alt="GitHub Logo" style="height: 20px;">
+        </a>
+
+        <a href="https://www.buymeacoffee.com/blitz-py" target="_blank" id="bmacButton" title="Buy Me a Coffee">
+            <img src="img/bmacdd.png" alt="Buy Me a Coffee Logo">
+            Buy me a coffee
+        </a>
+    </div>
+
+    <script>
+        function generateContent() {
+            const subject = document.getElementById('subject').value;
+            const description = document.getElementById('description').value;
+            const generatedContent = document.getElementById('generatedContent');
+
+            // Display generated content
+            generatedContent.innerHTML = `<h2>Your Generated ${subject} Content:</h2><p>${description}</p>`;
+
+            // Detect if the generated content is an essay/story/paragraph
+            if (description.split('\n').length > 2) {
+                // Ask the user if they want to check with GPT-Zero
+                const checkGptZero = confirm('Your generated content seems like an essay/story/paragraph. Do you want to check it with GPT-Zero?');
+                if (checkGptZero) {
+                    // Redirect to GPT-Zero or perform any other action
+                    window.location.href = 'https://gptzero.com';
+                }
+            }
+        }
+
+        function randomize() {
+            // ... (Same as before)
+        }
+    </script>
+</body>
+</html>
