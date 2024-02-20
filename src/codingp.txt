@@ -96,9 +96,7 @@
 96. How can I implement a login system with OAuth 2.0 in a Django web application?
 97. How do I use the "useEffect" hook in React for fetching data from an API?
 98. What is the role of the "NGINX" web server in a production environment?
-99. How can I create
-
- a responsive timeline using HTML, CSS, and JavaScript?
+99. How can I create a responsive timeline using HTML, CSS, and JavaScript?
 100. What is the purpose of the "mongoose.Schema" in a MongoDB and Node.js application?
 101. How do I implement user authentication in a Laravel web application?
 102. How can I use the "debounce" function in JavaScript for better performance?
@@ -188,9 +186,7 @@
 186. How can I implement user authentication in a SwiftUI mobile application?
 187. Explain the concept of the "Composite" pattern in software design.
 188. How do I use the "styled-system" library for styling in a React application?
-189. What is the role of the "useForm" hook in
-
- React for form management?
+189. What is the role of the "useForm" hook in React for form management?
 190. How can I implement a real-time chat feature in a Firebase-enabled React application?
 191. How do I handle authentication in a Spring Boot application using Spring Security?
 192. How can I use the "react-query" library for data fetching in a React Native application?
